@@ -1,11 +1,10 @@
-package com.snake;
+package com.snake.ioc;
 
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Lookup;
 import org.springframework.stereotype.Service;
 
 /**
- * @auther: snake
+ * @auther: com.snake
  * @date: 2020/3/9 22:45
  */
 @Service

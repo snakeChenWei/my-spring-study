@@ -1,17 +1,14 @@
-package com.snake;
+package com.snake.ioc;
 
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;
 import org.springframework.context.annotation.ComponentScan;
-import org.springframework.context.annotation.Configuration;
-import org.springframework.context.annotation.ImportResource;
-import org.springframework.context.support.ClassPathXmlApplicationContext;
 
 /**
- * @auther: snake
+ * @auther: com.snake
  * @date: 2020/3/9 22:45
  */
 //@Configuration // 3.通过javaConfig加载
-@ComponentScan("com.snake")
+@ComponentScan("com.snake.ioc")
 //@ImportResource("classpath:spring.xml")// 用于读取xml
 public class SpringApplicationConfig {
     public static void main(String[] args) {

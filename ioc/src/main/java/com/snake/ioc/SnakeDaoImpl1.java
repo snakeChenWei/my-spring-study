@@ -1,9 +1,9 @@
-package com.snake;
+package com.snake.ioc;
 
 import org.springframework.stereotype.Repository;
 
 /**
- * @auther: snake
+ * @auther: com.snake
  * @date: 2020/3/9 22:46
  */
 @Repository("snakeDao1")
