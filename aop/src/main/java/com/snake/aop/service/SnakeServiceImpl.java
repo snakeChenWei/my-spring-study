@@ -1,0 +1,23 @@
+package com.snake.aop.service;
+
+import org.springframework.stereotype.Repository;
+
+/**
+ * @auther: com.snake
+ * @date: 2020/3/9 22:46
+ */
+@Repository("snakeDao")
+public class SnakeServiceImpl implements SnakeService {
+
+    public void printHello() {
+        System.out.println("hello spring - 0");
+    }
+
+    public void printStr(String s){
+        System.out.println("-----s------");
+    }
+
+    private void printStr(String s,String s2){
+        System.out.println("-----s2-----");
+    }
+}
