@@ -1,9 +1,6 @@
 package com.snake.ioc;
 
-import com.snake.ioc.cycle.D;
-import com.snake.ioc.mybatis.DataSourceConfigDev;
-import com.snake.ioc.mybatis.DataSourceConfigTest;
-import com.snake.ioc.qualifier.QualifierService;
+import com.snake.ioc.mybatis.DataSourceConfigWindows;
 import org.springframework.context.annotation.*;
 
 /**
@@ -21,11 +18,10 @@ public class SpringApplicationConfig {
 //         ClassPathXmlApplicationContext applicationContext = new ClassPathXmlApplicationContext("spring.xml");
 
         // 2.通过注解加载
-        AnnotationConfigApplicationContext applicationContext = new AnnotationConfigApplicationContext(SpringApplicationConfig.class);
-        // todo 没生效 很奇怪
-//        applicationContext.getEnvironment().setActiveProfiles("test");
-//        applicationContext.register(DataSourceConfigDev.class, DataSourceConfigTest.class);
-//        applicationContext.refresh();
+        AnnotationConfigApplicationContext applicationContext = new AnnotationConfigApplicationContext();
+        applicationContext.getEnvironment().setActiveProfiles("mac");
+        applicationContext.register(SpringApplicationConfig.class, DataSourceConfigWindows.class, DataSourceConfigWindows.class);
+        applicationContext.refresh();
 //        SnakeService serviceImpl1 = (SnakeService) applicationContext.getBean("snakeService");
 //        SnakeService serviceImpl2 = (SnakeService) applicationContext.getBean("snakeService");
 //        serviceImpl1.printHello();

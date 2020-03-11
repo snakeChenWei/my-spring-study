@@ -1,4 +1,8 @@
 /my-spring-study.iml
 .idea
 target
-/ioc/ioc.iml
+/ioc/target
+./ioc/ioc.iml
+
+./aop/target/
+./aop/aop.iml
