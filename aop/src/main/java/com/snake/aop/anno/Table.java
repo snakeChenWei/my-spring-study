@@ -9,9 +9,9 @@ import java.lang.annotation.Target;
  * @author snake
  * on 2020/3/10 17:42.
  */
-@Target(ElementType.TYPE)
+@Target({ElementType.TYPE,ElementType.METHOD,ElementType.PARAMETER})
 @Retention(RetentionPolicy.RUNTIME)
 public @interface Table {
-    String value() ;
-    String key() ;
+    String value() default "" ;
+    String key() default "";
 }

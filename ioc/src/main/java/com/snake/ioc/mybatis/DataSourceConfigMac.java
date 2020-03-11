@@ -13,7 +13,7 @@ import javax.sql.DataSource;
  * @date: 2020/3/11 00:17
  */
 @Configuration
-@Profile("mac") // todo 没生效 很奇怪
+@Profile("mac")
 public class DataSourceConfigMac {
     public DataSourceConfigMac() {
         System.out.println("----init DataSourceConfigDev mac ----");

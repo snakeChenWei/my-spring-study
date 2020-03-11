@@ -7,4 +7,5 @@ package com.snake.aop.service;
 public interface SnakeService {
     void printHello();
     void printStr(String s);
+    void printStr(String s,String s2);
 }

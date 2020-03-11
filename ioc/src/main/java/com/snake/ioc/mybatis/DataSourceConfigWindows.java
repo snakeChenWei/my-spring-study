@@ -13,7 +13,7 @@ import javax.sql.DataSource;
  * @date: 2020/3/11 00:17
  */
 @Configuration
-@Profile("windows") // todo 没生效 很奇怪
+@Profile("windows")
 public class DataSourceConfigWindows {
     public DataSourceConfigWindows() {
         System.out.println("----init DataSourceConfigTest windows------");
