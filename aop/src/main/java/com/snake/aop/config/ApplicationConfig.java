@@ -10,7 +10,7 @@ import org.springframework.context.annotation.EnableAspectJAutoProxy;
  */
 @Configuration
 @ComponentScan("com.snake.aop")
-@EnableAspectJAutoProxy(proxyTargetClass=false)// false 使用jdk代理 ,true 使用cglib代理
+@EnableAspectJAutoProxy(proxyTargetClass=true)// false 使用jdk代理 ,true 使用cglib代理
 public class ApplicationConfig {
 
 }
