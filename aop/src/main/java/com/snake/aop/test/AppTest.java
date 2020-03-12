@@ -20,10 +20,15 @@ import java.io.IOException;
 public class AppTest {
     public static void main(String[] args) {
         AnnotationConfigApplicationContext context = new AnnotationConfigApplicationContext(ApplicationConfig.class);
-        SnakeServiceImpl snakeService0 = (SnakeServiceImpl) context.getBean("snakeService");
+        String[] beanDefinitionNames = context.getBeanDefinitionNames();
+        for (String beanDefinitionName : beanDefinitionNames) {
+            System.out.println(beanDefinitionName);
+        }
+
+        SnakeServiceImpl snakeService0 = (SnakeServiceImpl) context.getBean("snakeServiceImpl");
         snakeService0.printStr("0");
 
-        SnakeServiceImpl snakeService1 = (SnakeServiceImpl) context.getBean("snakeService");
+        SnakeServiceImpl snakeService1 = (SnakeServiceImpl) context.getBean("snakeServiceImpl");
         snakeService1.printStr("1");
         System.out.println(snakeService0.hashCode()+"|||"+snakeService1.hashCode());
         System.out.println("----------------------------------------------------------------");

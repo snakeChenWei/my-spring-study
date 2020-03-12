@@ -10,7 +10,7 @@ import org.springframework.stereotype.Service;
  */
 @Table
 @Scope("prototype")
-@Service("snakeService")
+@Service()
 public class SnakeServiceImpl implements SnakeService {
 
     public void printHello() {
