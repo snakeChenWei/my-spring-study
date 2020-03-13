@@ -3,8 +3,8 @@ package com.snake.ioc;
 import org.springframework.stereotype.Controller;
 
 /**
- * @auther: snake
- * @date: 2020/3/10 23:39
+ * @author snake
+ * @date   2020/3/10 23:39
  */
 @Controller
 public class ExcludeController {

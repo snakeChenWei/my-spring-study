@@ -4,8 +4,8 @@ import org.springframework.beans.factory.annotation.Lookup;
 import org.springframework.stereotype.Service;
 
 /**
- * @auther: com.snake
- * @date: 2020/3/9 22:45
+ * @author com.snake
+ * @date   2020/3/9 22:45
  */
 @Service
 public abstract class SnakeService {

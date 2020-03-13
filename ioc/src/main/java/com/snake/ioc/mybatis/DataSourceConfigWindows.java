@@ -9,8 +9,8 @@ import org.springframework.jdbc.datasource.DriverManagerDataSource;
 import javax.sql.DataSource;
 
 /**
- * @auther: snake
- * @date: 2020/3/11 00:17
+ * @author snake
+ * @date   2020/3/11 00:17
  */
 @Configuration
 @Profile("windows")

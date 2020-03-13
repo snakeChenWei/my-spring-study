@@ -4,8 +4,8 @@ import com.snake.ioc.mybatis.DataSourceConfigWindows;
 import org.springframework.context.annotation.*;
 
 /**
- * @auther: com.snake
- * @date: 2020/3/9 22:45
+ * @author com.snake
+ * @date   2020/3/9 22:45
  */
 @Configuration // 3.通过javaConfig加载
 @ComponentScan(basePackages = "com.snake.ioc",

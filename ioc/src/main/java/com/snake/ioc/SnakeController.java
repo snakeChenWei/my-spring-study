@@ -5,8 +5,8 @@ import org.springframework.beans.factory.InitializingBean;
 import javax.annotation.PostConstruct;
 
 /**
- * @auther: com.snake
- * @date: 2020/3/9 22:44
+ * @author com.snake
+ * @date   2020/3/9 22:44
  */
 // 声明周期和回调
 // 方式1.实现InitializingBean接口,重写afterPropertiesSet(),

@@ -5,8 +5,8 @@ import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.stereotype.Service;
 
 /**
- * @auther: snake
- * @date: 2020/3/11 00:11
+ * @author snake
+ * @date   2020/3/11 00:11
  */
 @Service
 public class QualifierService {

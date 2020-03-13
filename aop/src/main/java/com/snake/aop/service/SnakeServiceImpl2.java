@@ -5,8 +5,8 @@ import org.springframework.context.annotation.Scope;
 import org.springframework.stereotype.Service;
 
 /**
- * @auther: com.snake
- * @date: 2020/3/9 22:46
+ * @author com.snake
+ * @date   2020/3/9 22:46
  */
 @Table
 @Scope("prototype")

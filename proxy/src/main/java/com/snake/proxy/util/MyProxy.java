@@ -11,8 +11,8 @@ import java.net.URL;
 import java.net.URLClassLoader;
 
 /**
- * @auther: snake
- * @date: 2020/3/12 22:39
+ * @author snake
+ * @date   2020/3/12 22:39
  */
 public class MyProxy {
 
