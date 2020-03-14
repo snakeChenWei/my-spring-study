@@ -70,9 +70,11 @@ public class MyProxy {
         content += packageContent + importContent + clazzFirstLineContent
                 + filedContent + constructorContent + methodContent + clazzLastLine;
 
-        File file = new File("proxy\\src\\main\\java\\com\\snake\\proxy\\service\\$Proxy.java"); // 1. 绝对路径 2. 项目的路径
+        File file = new File("proxy/src/main/java/com/snake/proxy/service/$Proxy.java"); // 1. 绝对路径 2. 项目的路径
         try {
             // 写入java文件
+            System.out.println();
+            System.out.println(file.getAbsolutePath());
             FileWriter fw = new FileWriter(file);
             fw.write(content);
             fw.flush();
@@ -89,7 +91,7 @@ public class MyProxy {
             fileMgr.close();
 
             // 将class文件加载到内存 todo URLClassLoader用法
-            URL[] urls = new URL[]{new URL("file:proxy\\src\\main\\java\\")}; // 包引用路径之前的  1. 绝对路径 或者 2. 项目的路径
+            URL[] urls = new URL[]{new URL("file:proxy/src/main/java/")}; // 包引用路径之前的  1. 绝对路径 或者 2. 项目的路径
             URLClassLoader urlClassLoader = new URLClassLoader(urls);
             Class clazz = urlClassLoader.loadClass("com.snake.proxy.service.$Proxy");// 包引用路径
 

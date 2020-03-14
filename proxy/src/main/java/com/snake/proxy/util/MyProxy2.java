@@ -66,7 +66,8 @@ public class MyProxy2 {
                 returnNullContent += tab + tab + "return null;" + line;
             }
 
-            methodContent += tab + "public " + returnTypeName + " " + methodName + "(" + argsContent + ") {" + line
+            methodContent += tab + "@Override" + line
+                    + tab + "public " + returnTypeName + " " + methodName + "(" + argsContent + ") {" + line
                     + tab + tab + "try {" + line
                     + tab + tab + tab + "Method  method = Class.forName(\"" + targetInf.getName() + "\").getDeclaredMethod(\"" + methodName + "\"" + argsTypeContent + ");" + line
                     + tab + tab + tab + returnContent + "handler.invoke(method" + paramsContent + ");" + line
@@ -82,7 +83,7 @@ public class MyProxy2 {
         content += packageContent + importContent + line + clazzFirstLineContent
                 + filedContent + constructorContent + methodContent + clazzLastLine;
 
-        File file = new File("proxy\\src\\main\\java\\com\\snake\\proxy\\service\\$Proxy.java"); // 1. 绝对路径 2. 项目的路径
+        File file = new File("proxy/src/main/java/com/snake/proxy/service/$Proxy.java"); // 1. 绝对路径 2. 项目的路径
         try {
             // 写入java文件
             FileWriter fw = new FileWriter(file);
@@ -100,8 +101,8 @@ public class MyProxy2 {
             t.call();
             fileMgr.close();
 
-            // 将class文件加载到内存 todo URLClassLoader用法  只能用 loadClass()  不能用Class.forName()
-            URL[] urls = new URL[]{new URL("file:proxy\\src\\main\\java\\")}; // 包引用路径之前的  1. 绝对路径 或者 2. 项目的路径
+            // 将class文件加载到内存,生成类对象 todo URLClassLoader用法  只能用 loadClass()  不能用Class.forName()
+            URL[] urls = new URL[]{new URL("file:proxy/src/main/java/")}; // 包引用路径之前的  1. 绝对路径 或者 2. 项目的路径
             URLClassLoader urlClassLoader = new URLClassLoader(urls);
             Class clazz = urlClassLoader.loadClass("com.snake.proxy.service.$Proxy");// 包引用路径
 

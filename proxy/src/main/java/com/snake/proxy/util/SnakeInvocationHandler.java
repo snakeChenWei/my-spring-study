@@ -25,7 +25,11 @@ public class SnakeInvocationHandler implements InvocationHandler {
      */
     @Override
     public Object invoke(Object proxy, Method method, Object[] args) throws Throwable {
-        System.out.println("----------SnakeInvocationHandler------------");
-        return method.invoke(target);
+        String name = method.getName();
+        if ("sayName".equals(name)) {
+            System.out.println("-------------jdk invoke----------------");
+
+        }
+        return method.invoke(target, args);
     }
 }
