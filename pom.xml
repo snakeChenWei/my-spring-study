@@ -12,6 +12,7 @@
         <module>ioc</module>
         <module>aop</module>
         <module>proxy</module>
+        <module>snakeSpring</module>
     </modules>
 
     <dependencies>

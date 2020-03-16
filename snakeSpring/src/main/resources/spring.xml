@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!--
+    1、哪些类需要我来关联
+    2、怎么告诉我这些类(写bean)
+    3、怎么维护依赖关系（settr、constr）
+    4、怎么体现setter或者constr
+ -->
+<beans default="byType">
+<!--    <bean id="dao" class="com.snake.dao.UserDaoImpl"></bean>-->
+    <bean id="test" class="com.snake.dao.TestDaoImpl"></bean>
+
+    <bean id="dao" class="com.snake.dao.UserDaoImpl"></bean>
+    <bean id="dao1" class="com.snake.dao.UserDaoImpl1"></bean>
+
+    <bean id="service" class="com.snake.service.UserServiceImpl">
+    </bean>
+
+</beans>
