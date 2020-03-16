@@ -9,8 +9,10 @@
        default-autowire="byName"> <!-- 自动注入 byName 如果bean没有设置name, 默认为id-->
 
 <!--    <context:component-scan base-package="com.snake.ioc"/>-->
-<!--    <bean id="snakeDao" class="com.com.snake.ioc.SnakeDaoImpl"/>-->
-<!--    <bean id="snakeDao1" class="com.com.snake.ioc.SnakeDaoImpl1"/>-->
-<!--    <bean id="snakeService" class="com.com.snake.ioc.SnakeService"/>-->
+<!--    <bean id="snakeDao" class="com.snake.ioc.SnakeDaoImpl"/>-->
+<!--    <bean id="snakeDao1" class="com.snake.ioc.SnakeDaoImpl1"/>-->
+    <bean id="snakeService" class="com.snake.ioc.SnakeService">
+        <property name="snakeDao23333" ref="snakeDao"/>
+    </bean>
     <bean id="snakeController" class="com.snake.ioc.SnakeController" init-method="init3"/>
 </beans>

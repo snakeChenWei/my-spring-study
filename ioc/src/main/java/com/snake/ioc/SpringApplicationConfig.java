@@ -22,9 +22,9 @@ public class SpringApplicationConfig {
         applicationContext.getEnvironment().setActiveProfiles("mac");
         applicationContext.register(SpringApplicationConfig.class, DataSourceConfigWindows.class, DataSourceConfigWindows.class);
         applicationContext.refresh();
-//        SnakeService serviceImpl1 = (SnakeService) applicationContext.getBean("snakeService");
+        SnakeService serviceImpl1 = (SnakeService) applicationContext.getBean("snakeService");
 //        SnakeService serviceImpl2 = (SnakeService) applicationContext.getBean("snakeService");
-//        serviceImpl1.printHello();
+        serviceImpl1.printHello();
 //        serviceImpl2.printHello();
 //        try {
 //            Thread.sleep(2000);

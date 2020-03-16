@@ -11,7 +11,7 @@ import org.springframework.stereotype.Service;
 public abstract class SnakeService {
 
 //    @Autowired
-//    private SnakeDao snakeDao;
+    private SnakeDao snakeDao;
 
     // 通过构造方法注入
 //    public SnakeService(SnakeDao snakeDao) {
@@ -20,16 +20,17 @@ public abstract class SnakeService {
 
 
     // 通过set注入 set注入: byName 为set方法名称
-//    public void setSnakeDao1(SnakeDao dao) {
-//        this.dao = dao;
-//    }
+    public void setSnakeDao23333(SnakeDao snakeDao) {
+        this.snakeDao = snakeDao;
+    }
 
 
+    // 查找注入
     @Lookup("snakeDao")
     public abstract SnakeDaoImpl getSnakeDao();
 
     public void printHello() {
-//        snakeDao.printHello();
+        snakeDao.printHello();
         System.out.println(this.hashCode());
         System.out.println(getSnakeDao().hashCode());
     }
