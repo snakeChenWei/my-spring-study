@@ -1,5 +1,7 @@
 package com.snake.ioc;
 
+import com.snake.ioc.bean.DemoBean;
+import com.snake.ioc.bean.SnakeFactoryBean;
 import com.snake.ioc.mybatis.DataSourceConfigWindows;
 import org.springframework.context.annotation.*;
 
@@ -18,13 +20,13 @@ public class SpringApplicationConfig {
 //         ClassPathXmlApplicationContext applicationContext = new ClassPathXmlApplicationContext("spring.xml");
 
         // 2.通过注解加载
-        AnnotationConfigApplicationContext applicationContext = new AnnotationConfigApplicationContext();
-        applicationContext.getEnvironment().setActiveProfiles("mac");
-        applicationContext.register(SpringApplicationConfig.class, DataSourceConfigWindows.class, DataSourceConfigWindows.class);
-        applicationContext.refresh();
-        SnakeService serviceImpl1 = (SnakeService) applicationContext.getBean("snakeService");
+//        AnnotationConfigApplicationContext applicationContext = new AnnotationConfigApplicationContext();
+//        applicationContext.getEnvironment().setActiveProfiles("mac");
+//        applicationContext.register(SpringApplicationConfig.class, DataSourceConfigWindows.class, DataSourceConfigWindows.class);
+//        applicationContext.refresh();
+//        SnakeService serviceImpl1 = (SnakeService) applicationContext.getBean("snakeService");
 //        SnakeService serviceImpl2 = (SnakeService) applicationContext.getBean("snakeService");
-        serviceImpl1.printHello();
+//        serviceImpl1.printHello();
 //        serviceImpl2.printHello();
 //        try {
 //            Thread.sleep(2000);
@@ -36,5 +38,19 @@ public class SpringApplicationConfig {
 //        qualifierService.sayHello();
 
 //        D d = applicationContext.getBean(D.class);
+
+
+        // 3. 测试factoryBean 获取 factoryBean 需要加前缀&
+//        AnnotationConfigApplicationContext context = new AnnotationConfigApplicationContext(SpringApplicationConfig.class);
+//        DemoBean demoBean = (DemoBean) context.getBean("snakeFactoryBean");
+//
+//        SnakeFactoryBean snakeFactoryBean = (SnakeFactoryBean) context.getBean("&snakeFactoryBean");
+//        snakeFactoryBean.testBean();
+
+        // 4. 测试 直接类注入
+        AnnotationConfigApplicationContext context = new AnnotationConfigApplicationContext();
+        context.register(DemoBean.class);
+        context.refresh();
+
     }
 }
