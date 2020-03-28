@@ -13,3 +13,6 @@ proxy/proxy.iml
 
 snakeSpring/target
 snakeSpring/snakeSpring.iml
+
+snake-mybatis/target
+snake-mybatis/snake-mybatis.iml
