@@ -14,6 +14,8 @@
         <module>proxy</module>
         <module>snakeSpring</module>
         <module>snake-mybatis</module>
+        <module>import-selectort</module>
+        <module>snake-cglib-spring</module>
     </modules>
 
     <properties>
