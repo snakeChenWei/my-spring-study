@@ -16,6 +16,7 @@
         <module>snake-mybatis</module>
         <module>import-selectort</module>
         <module>snake-cglib-spring</module>
+        <module>spring-log</module>
     </modules>
 
     <properties>
@@ -24,12 +25,12 @@
     </properties>
 
     <dependencies>
-    <!-- https://mvnrepository.com/artifact/org.springframework/spring-context -->
-    <dependency>
-        <groupId>org.springframework</groupId>
-        <artifactId>spring-context</artifactId>
-        <version>5.2.4.RELEASE</version>
-    </dependency>
+        <!-- https://mvnrepository.com/artifact/org.springframework/spring-context -->
+        <dependency>
+            <groupId>org.springframework</groupId>
+            <artifactId>spring-context</artifactId>
+            <version>5.0.7.RELEASE</version>
+        </dependency>
 
-</dependencies>
+    </dependencies>
 </project>
