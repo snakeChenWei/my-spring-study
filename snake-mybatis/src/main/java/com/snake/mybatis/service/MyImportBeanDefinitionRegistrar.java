@@ -14,7 +14,7 @@ import org.springframework.stereotype.Component;
  */
 public class MyImportBeanDefinitionRegistrar implements ImportBeanDefinitionRegistrar {
 
-    // todo模拟mybatis扫描包,而不是这种写死的
+    // todo 模拟mybatis扫描包,而不是这种写死的
     @Override
     public void registerBeanDefinitions(AnnotationMetadata importingClassMetadata, BeanDefinitionRegistry registry) {
         BeanDefinitionBuilder builder = BeanDefinitionBuilder.genericBeanDefinition(SnakeDao.class);
